@@ -12,7 +12,7 @@ showResult(5, exercises.exercise05("Supercalifragilisticexpialidocious")); //I c
 showResult(6, exercises.exercise06("TENET")); // I needed to investigate about what exactly a palindrome is, because I was wrong. I didnt even know a palindrome could be numbers, phrases with commas, dates with numbers and / symbol or also that a palindrome could be an odd string with a central letter that doesn't repeat, so I also discover one of the first palindromes historically recorded, TENET, wich is one of the most insane brain-grinder Nolan's films. wich gives me an insight on how is this lenguage going to be (spoiler: I couldn't understand TENET, so...)
 showResult(7, exercises.exercise07(new Date()));
 showResult(8, exercises.exercise08(2000));
-// showResult(9, exercises.exercise09(10, 0, 100));
+showResult(9, exercises.exercise09(10, 0, 100));
 // showResult(10, exercises.exercise10("Hello world"));
 // showResult(11, exercises.exercise11(movies));
 // showResult(12, exercises.exercise12(movies));
