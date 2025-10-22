@@ -6,3 +6,12 @@ export function showResult(num, content) {
       </div>
     `;
 }
+
+export function sortStrings(a, b) {
+  const string1 = a.toLowerCase();
+  const string2 = b.toLowerCase();
+
+  if (string1 < string2) return -1;
+  if (string1 > string2) return 1;
+  return 0;
+}
