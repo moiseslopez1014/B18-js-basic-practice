@@ -1,3 +1,4 @@
+import { exercise18 } from "./exercise-18.js";
 /* 
 EJERCICIO 19:
 Un isograma es una palabra o frase en la que cada letra aparece el mismo número de veces.
@@ -8,13 +9,11 @@ Ejemplos:
 "the string 'hello world' is not an isogram"
 */
 export function exercise19(string) {
-  // Escribe tu solución aquí
-
+  const letterValues = Object.values(lettersOcurrences(string))// Extract the values from the object into an array
+  const isIsogram = letterValues.every(val => val === letterValues[0]); // checks that every values in the array are the same and then return true or false
   return `the string '${string}' is ${isIsogram ? "" : "not "}an isogram`;
 }
 
 function lettersOcurrences(string) {
-  // Función ayudante sugerida que devuelve un objeto
-  // donde las claves son las letras y los valores son
-  // el número de veces que aparecen en la cadena (string)
+  return exercise18(string); // We reuse the function previous exercise
 }
