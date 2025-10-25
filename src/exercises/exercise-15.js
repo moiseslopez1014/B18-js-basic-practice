@@ -26,5 +26,5 @@ Pista: usa el método "groupBy" de la clase Object
 */
 export function exercise15(movies) {
     const ex15Movies = [...movies];
-    return Object.groupBy(ex15Movies, movie => movie.category); //makes an object, with categories as keys, and as values an array with the objects belonging to it.
+    return Object.groupBy(ex15Movies, movie => movie.category);
 }

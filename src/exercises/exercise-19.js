@@ -9,11 +9,11 @@ Ejemplos:
 "the string 'hello world' is not an isogram"
 */
 export function exercise19(string) {
-  const letterValues = Object.values(lettersOcurrences(string))// Extract the values from the object into an array
-  const isIsogram = letterValues.every(val => val === letterValues[0]); // checks that every values in the array are the same and then return true or false
+  const letterValues = Object.values(lettersOcurrences(string));
+  const isIsogram = letterValues.every((val) => val === letterValues[0]);
   return `the string '${string}' is ${isIsogram ? "" : "not "}an isogram`;
 }
 
 function lettersOcurrences(string) {
-  return exercise18(string); // We reuse the function previous exercise
+  return exercise18(string);
 }

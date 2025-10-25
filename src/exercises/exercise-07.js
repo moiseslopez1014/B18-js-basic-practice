@@ -12,9 +12,10 @@ Un reloj muestra:
  - podemos obtener la hora, minutos y segundos con la función "getTime" .
 */
 export function exercise07(date) {
-  let ms = getTime(date).seconds*1000
-  +getTime(date).minutes*60*1000
-  +getTime(date).hours*60*60*1000;// total ms would be second(*1000)+ minutes(in ms)+ hours(in ms)
+  let ms =
+    getTime(date).seconds * 1000 +
+    getTime(date).minutes * 60 * 1000 +
+    getTime(date).hours * 60 * 60 * 1000;
   return `Milliseconds from midnight: ${ms}`;
 }
 

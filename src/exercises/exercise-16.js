@@ -10,10 +10,23 @@ Nota: asegurate que no hay titulos duplicados
 export function exercise16(movies) {
   const actors = ["Leonardo DiCaprio", "Robert De Niro", "Tom Hanks"];
   const ex16Movies = [...movies];
-  const BestDiCaprio = ex16Movies.filter(movie => movie.actors.includes(actors[0])).sort((a,b) => a.rating - b.rating).pop();
-  const BestDeNiro = ex16Movies.filter(movie => movie.actors.includes(actors[1])).sort((a,b) => a.rating - b.rating).pop();
-  const BestHanks = ex16Movies.filter(movie => movie.actors.includes(actors[2])).sort((a,b) => a.rating - b.rating).pop(); // alternative to map, filter movies with an actor, get the best one last in the array and then POP! to the const
+  const BestDiCaprio = ex16Movies
+    .filter((movie) => movie.actors.includes(actors[0]))
+    .sort((a, b) => a.rating - b.rating)
+    .pop();
+  const BestDeNiro = ex16Movies
+    .filter((movie) => movie.actors.includes(actors[1]))
+    .sort((a, b) => a.rating - b.rating)
+    .pop();
+  const BestHanks = ex16Movies
+    .filter((movie) => movie.actors.includes(actors[2]))
+    .sort((a, b) => a.rating - b.rating)
+    .pop();
   const BestMoviesSelected = [];
-  BestMoviesSelected.push(BestDeNiro.title, BestDiCaprio.title, BestHanks.title); //create array with selected actors.title
-  return Array.from(new Set(BestMoviesSelected)); //new set to remove duplicates
+  BestMoviesSelected.push(
+    BestDeNiro.title,
+    BestDiCaprio.title,
+    BestHanks.title
+  );
+  return Array.from(new Set(BestMoviesSelected));
 }

@@ -7,10 +7,9 @@ Nota: even = par | odd = impar
 export function exercise02(number) {
   let result;
   if (number % 2 === 0) {
-    result = 'even';
-  }
-  else {
-    result = 'odd'
+    result = "even";
+  } else {
+    result = "odd";
   }
   return `Number ${number} is ${result}`;
 }

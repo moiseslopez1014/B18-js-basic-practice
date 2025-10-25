@@ -6,8 +6,8 @@ Nota: vowels = "aeiou" (no incluyas acentos)
 */
 export function exercise03(string) {
   const vowels = "aeiou";
-  const splittered = string.split(""); // tranform all character in string into array
-  const filtered = splittered.filter(letter => vowels.includes(letter));  // Set a new array filterin (if letter is a vowel)
-  const result = filtered.length; // result is number of elements in filtered array
+  const splittered = string.split("");
+  const filtered = splittered.filter((letter) => vowels.includes(letter));
+  const result = filtered.length;
   return `Number of vowels in '${string}' is ${result}`;
 }

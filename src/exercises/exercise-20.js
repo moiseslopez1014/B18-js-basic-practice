@@ -16,31 +16,31 @@ Nota: evita llamar a la función con números altos en la versión recursiva.
 */
 
 export function exercise20(n) {
-    if (n === 0) { //first fib position
+  if (n === 0) {
     return 0;
   }
-  if (n === 1) { //second fib position
+  if (n === 1) {
     return 1;
   }
-  return exercise20(n-1) + exercise20(n-2); //returns fib position -1 + fib position -2 (position 10 would be 34(fib9(fib8+fib7)) + 21(fib8)...)
+  return exercise20(n - 1) + exercise20(n - 2);
 }
 
 export function exercise20Iterative(n) {
-  if (n === 0) { //first fib position
+  if (n === 0) {
     return 0;
   }
-  if (n === 1) { //second fib position
+  if (n === 1) {
     return 1;
   }
 
-  let previousNumber = 0; 
-  let currentNumber = 1; //Start here
-  let nexNumber; 
+  let previousNumber = 0;
+  let currentNumber = 1;
+  let nexNumber;
 
-  for (let i = 2; i <= n; i++) { // start second fib position
-    nexNumber = previousNumber + currentNumber; //next = 0+1
-    previousNumber = currentNumber; //when restart for next fib position, previous will be current 0 becomes 1
-    currentNumber = nexNumber;//and current will be next 1 becomes 1
+  for (let i = 2; i <= n; i++) {
+    nexNumber = previousNumber + currentNumber;
+    previousNumber = currentNumber;
+    currentNumber = nexNumber;
   }
   return currentNumber;
 }
