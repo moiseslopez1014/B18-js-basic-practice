@@ -1,0 +1,20 @@
+/* 
+EJERCICIO 11:
+Escribe una función que pasándole como parámetro el array de películas 'movies'
+exportado en el archivo "data.js" devuelve un array con el título de las 
+películas ordenadas alfabéticamente por el título.
+
+Consejo: 
+puedes definir en utils.js una función auxiliar para ordenar las cadenas
+que recibe como parámetro dos cadenas y devuelve -1 si la primera es menor que la segunda, 
+0 si son iguales y 1 si la primera es mayor que la segunda.
+*/
+import { sortStrings } from "../utils.js";
+export function exercise12(movies) {
+  const arrayFiltered = [...movies];
+  const arrayTitles = [];
+  arrayFiltered.forEach((movie) => {
+    arrayTitles.push(movie.title);
+  });
+  return arrayTitles.sort(sortStrings);
+}
